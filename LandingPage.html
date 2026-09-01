@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nextora - Modern Business Solutions</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #e9ecf1;
+    color: #1a1a1a;
+  }
+
+  .page-wrapper {
+    max-width: 1100px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  /* ===== Navbar ===== */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+  }
+
+  .logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #16382f;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 15px;
+  }
+
+  .nav-links a:hover {
+    color: #16382f;
+  }
+
+  .nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .login-link {
+    text-decoration: none;
+    color: #16382f;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .signup-btn {
+    background-color: #16382f;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  /* ===== Hero Section ===== */
+  .hero {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .hero-left {
+    flex: 1;
+    padding: 30px 50px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-left h1 {
+    font-size: 42px;
+    line-height: 1.25;
+    font-weight: 700;
+    color: #16382f;
+    margin-bottom: 20px;
+  }
+
+  .hero-left p {
+    font-size: 15px;
+    color: #5c5c5c;
+    line-height: 1.6;
+    max-width: 420px;
+    margin-bottom: 30px;
+  }
+
+  .hero-cta {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 45px;
+  }
+
+  .get-started-btn {
+    background-color: #e2632f;
+    color: #ffffff;
+    padding: 13px 26px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .get-started-btn:hover {
+    background-color: #cc5426;
+  }
+
+  .explore-link {
+    text-decoration: none;
+    color: #16382f;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .logo-strip {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+  }
+
+  .logo-strip span {
+    font-size: 15px;
+    color: #6b6b6b;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* ===== Hero Right ===== */
+  .hero-right {
+    flex: 1;
+    background-color: #16382f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+  }
+
+  .hero-image-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .hero-image-card img {
+    width: 100%;
+    display: block;
+    border-radius: 16px;
+  }
+
+  .members-badge {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    background-color: rgba(22, 56, 47, 0.85);
+    color: #ffffff;
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(3px);
+  }
+
+  .avatars {
+    display: flex;
+  }
+
+  .avatars img {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid #16382f;
+    margin-left: -8px;
+    display: block;
+  }
+
+  .avatars img:first-child {
+    margin-left: 0;
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 900px) {
+    .navbar {
+      flex-direction: column;
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .nav-links {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .hero {
+      flex-direction: column;
+    }
+
+    .hero-left {
+      padding: 30px;
+      text-align: center;
+      align-items: center;
+    }
+
+    .hero-left p {
+      max-width: 100%;
+    }
+
+    .hero-cta {
+      justify-content: center;
+    }
+
+    .logo-strip {
+      justify-content: center;
+    }
+
+    .hero-right {
+      padding: 30px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-left h1 {
+      font-size: 30px;
+    }
+
+    .hero-cta {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <div class="page-wrapper">
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">Nextora.</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <a href="#login" class="login-link">Log in</a>
+        <a href="#signup" class="signup-btn">Sign up</a>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Empower Your Business with Modern Solutions</h1>
+        <p>Drive growth, enhance productivity, and achieve more with our innovative services tailored for modern enterprises.</p>
+
+        <div class="hero-cta">
+          <button class="get-started-btn">Get Started</button>
+          <a href="#services" class="explore-link">Explore Services</a>
+        </div>
+
+        <div class="logo-strip">
+          <span>&#10003; Ovalism</span>
+          <span>&#9679; Orbital</span>
+          <span>Webflow</span>
+          <span>&#10022; Craftly</span>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-image-card">
+          <div class="members-badge">
+            <div class="avatars">
+              <img src="https://i.pravatar.cc/40?img=1" alt="Member">
+              <img src="https://i.pravatar.cc/40?img=2" alt="Member">
+              <img src="https://i.pravatar.cc/40?img=3" alt="Member">
+            </div>
+            Active 2k Members
+          </div>
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&h=700&fit=crop" alt="Woman working on laptop">
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>
